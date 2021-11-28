@@ -436,9 +436,9 @@ function! Tex_standard_env(env)
 			let arrlabel = ""
 		endif
 		if Tex_GetVarValue("Tex_LabelAfterContent")
-			let content = "<+content+>\<cr>" . arrlabel
+			let content = "\<cr>" . arrlabel
 		else
-			let content = arrlabel . "<+content+>\<cr>"
+			let content = arrlabel . "\<cr>"
 		end
 	endif
 	return IMAP_PutTextWithMovement('\begin{'.a:env."}\<cr>".content."\\end{".a:env."}" . s:end_with_cr . "<++>")

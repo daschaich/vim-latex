@@ -431,7 +431,7 @@ function! Tex_standard_env(env)
 	else
 		if a:env !~ '\*'
 			let labelprefix = Tex_GetVarValue("Tex_EnvLabelprefix_{'".a:env."'}")
-			let arrlabel = "\\label{".labelprefix."<+label+>}\<cr>"
+			let arrlabel = "\\label{".labelprefix."}\<cr>"
 		else
 			let arrlabel = ""
 		endif
